@@ -86,7 +86,7 @@ vol= IntVar(value=100)
 
 root.configure(bg='grey')
 
-label = ttk.Label(text="v0.1.3a_gui")
+label = ttk.Label(text="v0.1.4a_gui")
 label.pack(anchor="nw")
 
 tg = ttk.Label(text="https://t.me/kolocer")
