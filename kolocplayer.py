@@ -126,7 +126,7 @@ volll=ttk.Button(text="Принять", command=vollll)
 volll.place(x=0, y= 125)
 
 resr=ttk.Button(text="reset", command=delh)
-resr.place(x=100, y= 125)
+resr.place(x=400, y= 50)
 
 mainloop()
 
