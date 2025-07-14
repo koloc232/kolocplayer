@@ -3,7 +3,6 @@ from tkinter import *
 from tkinter import filedialog
 from tkinter import ttk
 from tkinter import messagebox as mb
-import ffmpeg
 from tkinter.messagebox import showerror, showwarning, showinfo
 from pyglet.media import Player
 import pyglet
@@ -25,7 +24,7 @@ def vollll():
     hj.volume = float(ij)
 
 def hel():
-    showinfo(title="helper", message="''PLAY''-Вклюючить музыку; ''load''-Загрузить музыку; ''pause''-останвка музыки; 'Кликер'- ку и так понятно,'volume'- громкость,хотите другую музыку?, используйте сного load и PLAY.")
+    showinfo(title="helper", message="''PLAY''-Вклюючить музыку; ''load''-Загрузить музыку; ''pause''-останвка музыки; 'Кликер'- ку и так понятно,'volume'- громкость,хотите другую музыку?, используйте сного load и PLAY.,'reset'- останавливает и сбрасывает музыку(есть баг что надо нажать несколько раз для отановки (!музыка сбрасывается!) из-за испоьзования паузы)")
 
 def play():
     global h,x,s,sound,sor,q,hj,sor
@@ -53,6 +52,7 @@ def play():
         mb.showerror("Ошибка",
                      "Используйте только 1 play!")
     q = 1
+    
     sor = hj.play()
 
 def lo():
@@ -72,6 +72,9 @@ def pause():
     q= q-1
     print(hj)
     hj.pause()
+    
+def delh():
+    hj.on_eos()
 
     
 root = Tk()
@@ -121,6 +124,9 @@ voll.place(x= 50,y =100)
 
 volll=ttk.Button(text="Принять", command=vollll)
 volll.place(x=0, y= 125)
+
+resr=ttk.Button(text="reset", command=delh)
+resr.place(x=100, y= 125)
 
 mainloop()
 
