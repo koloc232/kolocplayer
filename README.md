@@ -1,6 +1,6 @@
 # kolocplayer
-New music player 
+Новый музыкальный плеер
 
-Hello i am koloc =0
+Я koloc=0
 
 tg : https://t.me/kolocer
