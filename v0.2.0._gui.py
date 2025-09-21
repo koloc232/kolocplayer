@@ -60,7 +60,7 @@ class MusicPlayer:
         self.help_button = ttk.Button(text="help", command=self.show_help)
         self.help_button.pack(anchor=SE, expand=1)
 
-        self.volume_control = ttk.Spinbox(from_=0.1, to=1, increment=0.1, width=5, state ="readonly")
+        self.volume_control = ttk.Spinbox(from_=0.1, to=1, increment=0.1, width=5)
         self.volume_control.place(x=0, y=100)
 
         self.volume_label = ttk.Label(text="volume")
@@ -127,7 +127,7 @@ class MusicPlayer:
         self.song_path = filedialog.askopenfilename(
             title="Выберите музыку:", 
             initialdir="C://",
-            filetypes=[("Популярные:", "*.mp3 *.wav *.ogg *.flac *.aac *.aiff *.wma"), ("Все файлы", "*")]
+            filetypes=[("Популярные:", "*.mp3 *.wav *.aac *.aiff *.wma"), ("Все файлы", "*")]
         )
         self.song_label["text"] = self.song_path
 
